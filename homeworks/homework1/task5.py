@@ -11,12 +11,7 @@ Examples:
 def find_maximal_subarray_sum(nums, k):
     """This function returns the sum of sub-array with length less equal to k"""
     sum_list = []
-    for sub_arr_len in range (1, k+1):
+    for sub_arr_len in range(1, k + 1):
         for start_position in range(len(nums) - sub_arr_len + 1):
-            sum_list.append(sum(nums[start_position: start_position + sub_arr_len]))
+            sum_list.append(sum(nums[start_position : start_position + sub_arr_len]))
     return max(sum_list)
-
-
-
-
-

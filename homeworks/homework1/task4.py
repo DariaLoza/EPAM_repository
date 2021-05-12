@@ -8,7 +8,7 @@ from typing import List
 
 
 def check_sum_of_four(a: List[int], b: List[int], c: List[int], d: List[int]) -> int:
-    """This function computes how many tuples there are such that A[i] + B[j] + C[k] + D[l] is zero """
+    """This function computes how many tuples there are such that A[i] + B[j] + C[k] + D[l] is zero"""
     dic = {}
     count = 0
     len_list = len(a)
