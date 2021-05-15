@@ -30,7 +30,7 @@ def test_read_magic_number_false():
     os.remove(path)
 
 
-def test_read_magic_number_ValueError():
+def test_read_magic_number_value_error():
     """_Testing ValueError result_"""
     test_file_3 = os.open("file_3.txt", os.O_CREAT | os.O_WRONLY)
     number = "t"
