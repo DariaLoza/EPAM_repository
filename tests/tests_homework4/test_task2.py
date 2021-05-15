@@ -12,8 +12,8 @@ def test_count_dots_on_i_without_monkey_patch():
 class FetchTests(TestCase):
     def test_count_dots_on_i_with_monkey_patch(self):
         with patch("urllib.request.urlopen") as mock_request:
-            url = "smth"
+            url = "smith"
 
-            mock_request.return_value.response = "iiiiii"
+            mock_request.return_value.response = "Avicii"
 
-            self.assertTrue(self, count_dots_on_i(url) == 6)
+            self.assertTrue(self, count_dots_on_i(url) == 3)
