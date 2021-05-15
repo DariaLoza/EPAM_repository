@@ -1,6 +1,5 @@
 import pytest
-from homeworks.homework2.task4 import cache
-from homeworks.homework2.task4 import cached_function
+from homeworks.homework2.task4 import cache, cached_function
 
 
 def test_cache_function():
