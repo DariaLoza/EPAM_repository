@@ -1,4 +1,3 @@
-import pytest
 from homeworks.homework4.task3 import my_precious_logger
 
 

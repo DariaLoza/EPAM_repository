@@ -1,4 +1,3 @@
-import pytest
 from homeworks.homework4.task4 import fizzbuzz
 
 
