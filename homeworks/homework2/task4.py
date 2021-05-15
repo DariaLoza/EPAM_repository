@@ -19,7 +19,7 @@ def cache(cached_function):
 
     return wrapped
 
-
+@cache
 def cached_function(a, b):
     """Docstring of original function"""
     return (a ** b) ** 2

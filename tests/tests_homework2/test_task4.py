@@ -9,3 +9,7 @@ def test_cache_function():
     val_1 = cache_function(*some)
     val_2 = cache_function(*some)
     assert val_1 is val_2
+
+
+def test_original_docstring():
+    assert cached_function.__doc__ == "Docstring of original function"
