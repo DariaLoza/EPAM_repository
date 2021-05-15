@@ -1,4 +1,3 @@
-import pytest
 from homeworks.homework3.task3 import make_filter, sample_data
 
 

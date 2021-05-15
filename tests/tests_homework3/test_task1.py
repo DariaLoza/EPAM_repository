@@ -1,6 +1,5 @@
 from unittest.mock import Mock, call
 
-import pytest
 from homeworks.homework3.task1 import cache
 
 
