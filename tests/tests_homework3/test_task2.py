@@ -1,4 +1,3 @@
-import pytest
 from homeworks.homework3.task2 import make_it_faster
 
 
