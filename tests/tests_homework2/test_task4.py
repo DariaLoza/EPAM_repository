@@ -1,4 +1,3 @@
-import pytest
 from homeworks.homework2.task4 import cache, cached_function
 
 
