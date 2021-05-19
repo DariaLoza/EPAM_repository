@@ -10,7 +10,6 @@ import string
 from collections import OrderedDict
 from typing import List
 
-
 from homeworks.homework2.nltkmodules import nltk
 from nltk import word_tokenize
 
