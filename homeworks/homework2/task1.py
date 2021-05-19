@@ -10,7 +10,8 @@ import string
 from collections import OrderedDict
 from typing import List
 
-import nltk
+
+from homeworks.homework2.nltkmodules import nltk
 from nltk import word_tokenize
 
 nltk.download("punkt")
