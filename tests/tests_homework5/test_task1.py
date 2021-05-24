@@ -1,7 +1,5 @@
 import datetime
 
-import pytest
-
 from homeworks.homework5.task1 import Homework, Student, Teacher
 
 
@@ -27,4 +25,3 @@ def test_do_homework(capsys):
     student.do_homework(expired_homework)
     captured = capsys.readouterr()
     assert captured.out.strip() == "You are late"
-
