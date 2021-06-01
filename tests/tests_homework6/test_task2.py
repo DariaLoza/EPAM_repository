@@ -15,7 +15,7 @@ result_2 = good_student.do_homework(docs_hw, "I have done this hw too")
 result_3 = lazy_student.do_homework(docs_hw, "done")
 
 
-def test_not_homework_passed_in_homework_result():
+def test_not_homework_passed_in_homework_result_():
     with pytest.raises(TypeError):
         result_4 = HomeworkResult(good_student, "fff", "Solution")
 
