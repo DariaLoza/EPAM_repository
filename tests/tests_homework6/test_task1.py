@@ -1,5 +1,4 @@
-import pytest
-from homeworks.homework6.task1 import *
+from homeworks.homework6.task1 import User
 
 
 def test_first_user():
