@@ -10,7 +10,7 @@ reset_instances_counter - сбросить счетчик экземпляров
 
 
 def instances_counter(cls):
-    """This decorator adds 2 methods to the class """
+    """This decorator adds 2 methods to the class"""
 
     class Counter(cls):
         instances: int = 0

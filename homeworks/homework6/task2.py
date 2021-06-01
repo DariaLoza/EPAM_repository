@@ -45,7 +45,7 @@ from collections import defaultdict
 
 
 class DeadlineError(Exception):
-    """You are late """
+    """You are late"""
 
 
 class RepeatedResultError(Exception):
