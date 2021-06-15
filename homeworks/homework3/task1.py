@@ -25,7 +25,7 @@ def make_key(args, kwargs):
     return (args, tuple(sorted(kwargs.items())))
 
 
-def cache(times=2):
+def cache(times):
     def wrapper(fun):
         cache_data = {}
 
@@ -43,11 +43,3 @@ def cache(times=2):
         return inner
 
     return wrapper
-
-
-@cache()
-def foo(a, b):
-    return a + b
-
-
-print(foo(1, 3))
