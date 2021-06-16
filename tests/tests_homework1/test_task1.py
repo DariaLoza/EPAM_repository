@@ -2,7 +2,7 @@ from homeworks.homework2.task1 import *
 
 
 def test_get_longest_diverse_words():
-    """Testing that function find 10 longest words consisting from largest amount of unique symbols"""
+    """Testing that function find 10 longest words"""
     assert get_longest_diverse_words("tests/tests_homework1/data.txt") == [
         "Nichtkämpfern",
         "Entscheidungsschlacht",
@@ -33,5 +33,5 @@ def test_count_non_ascii_chars():
 
 
 def test_get_most_common_non_ascii_char():
-    """Testing that function find most common non ascii char for document"""
+    """Testing that function find most common non ascii char"""
     assert get_most_common_non_ascii_char("tests/tests_homework1/data.txt") == "ä"
