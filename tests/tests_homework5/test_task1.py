@@ -24,4 +24,4 @@ def test_do_homework(capsys):
     student = Student("Roman", "Petrov")
     student.do_homework(expired_homework)
     captured = capsys.readouterr()
-    assert captured.out.strip() == "You are late"
+    assert captured.out.strip() == 'You are late'
