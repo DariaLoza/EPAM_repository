@@ -3,9 +3,9 @@ Write a function that takes directory path, a file extension and an optional tok
 It will count lines in all files with that extension if there are no tokenizer.
 If a the tokenizer is not none, it will count tokens.
 For dir with two files from hw1.py:
->>> universal_file_counter("test_file_HW_9_task3", "txt")
+>>> universal_file_counter("tests/tests_homework9/test_file_HW_9_task3", "txt")
 4
->>> universal_file_counter("test_file_HW_9_task3", "txt", str.split)
+>>> universal_file_counter("tests/tests_homework9/test_file_HW_9_task3", "txt", str.split)
 4
 """
 from pathlib import Path
