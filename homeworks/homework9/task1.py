@@ -34,4 +34,4 @@ def merge_sorted_files(file_list: [str, str]) -> Iterator:
     return list_merged
 
 
-print(merge_sorted_files(['file1', 'file2']))
+print(merge_sorted_files(["file1", "file2"]))

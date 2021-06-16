@@ -9,7 +9,9 @@ For dir with two files from hw1.py:
 4
 """
 from pathlib import Path
-from typing import Optional, Callable
+
+from typing import Callable, Optional
+
 
 def line_by_line_tokenizer(file):
     counter = 0
@@ -17,15 +19,17 @@ def line_by_line_tokenizer(file):
         counter += 1
     return counter
 
-def universal_file_counter( dir_path: Path, file_extension: str, tokenizer: Optional[Callable] = line_by_line_tokenizer) -> int:
+
+def universal_file_counter(
+    dir_path: Path,
+    file_extension: str,
+    tokenizer: Optional[Callable] = line_by_line_tokenizer,
+) -> int:
     counter = 0
 
-    with open(dir_path, 'r') as file:
+    with open(dir_path, "r") as file:
         if tokenizer is True:
             counter += len(tokenizer(file.read))
             return counter
         else:
             return line_by_line_tokenizer(file)
-
-
-
