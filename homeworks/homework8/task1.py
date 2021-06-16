@@ -16,23 +16,23 @@ In case when value cannot be assigned to an attribute (for example when there's 
 ValueError should be raised. File size is expected to be small,
 you are permitted to read it entirely into memory."""
 
+from pathlib import Path
 
 class KeyValueStorage:
     def __init__(self, path):
-        with open(path, "r") as file:
-            data = file.read().splitlines()
+        file1 = Path(path)
+        data = file1.read_text().splitlines()
+        for line in data:
+            key, value = line.split("=")
 
-            for line in data:
-                key, value = line.split("=")
+            if not key.isidentifier():
+                raise ValueError("Wrong key!")
 
-                if not key.isidentifier():
-                    raise ValueError("Wrong key!")
+            if value.isdigit():
+                value = int(value)
 
-                if value.isdigit():
-                    value = int(value)
-
-                if key not in self.__dict__:
-                    setattr(self, key, value)
+            if key not in self.__dict__:
+                setattr(self, key, value)
 
     def __getitem__(self, key):
         return self.__dict__.get(key, None)
