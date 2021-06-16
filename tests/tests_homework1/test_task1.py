@@ -1,5 +1,7 @@
 from homeworks.homework2.task1 import *
+
 file_path = "tests/tests_homework1/data.txt"
+
 
 def test_get_longest_diverse_words():
     """Testing that function find 10 longest words"""
