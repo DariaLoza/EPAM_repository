@@ -18,6 +18,7 @@ you are permitted to read it entirely into memory."""
 
 from pathlib import Path
 
+
 class KeyValueStorage:
     def __init__(self, path):
         file1 = Path(path)
