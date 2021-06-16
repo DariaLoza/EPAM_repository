@@ -1,45 +1,20 @@
-from collections import namedtuple
-import functools
-
-# типичный паттерн класс-декоратор
-"""class CountCalls:
-    def __init__(self, func):
-        functools.update_wrapper(self, func)
-        self.func = func
-        self.num = 0
-
-    def __call__(self, *args, **kwargs):
-        self.num += 1
-        print(f'Вызов {self.func.__name__!r}: {self.num}')
-        return self.func(*args, **kwargs)
-
-@CountCalls
-def say(name):
-    print(f'Привет {name}')"""
-
-"""with open('key_value_storage', 'r', encoding='utf') as file:  # Читаем файл
-    data = file.read().splitlines()  # read().splitlines() - чтобы небыло пустых строк
-print(data)
-dic = {}  # Создаем пустой словарь
-
-for line in data:  # Проходимся по каждой строчке
-    key, value = line.split('=')  # Разделяем каждую строку по двоеточии(в key будет - пицца, в value - 01)
-    dic.update({key: value})  # Добавляем в словарь
-
-print(dic)  # Вывод словаря на консоль
-
-list_of_keys = []
-for key in dic:
-    list_of_keys.append(key)
-print(list_of_keys)
-result = namedtuple('result', list_of_keys)
-storage = result(**dic)
-storage2 = storage._asdict()
-print(result)
-print(storage)
-print(storage.song)
-print(storage._asdict()['name'])
-print(storage2['name'])"""
+"""We have a file that works as key-value storage,
+each line is represented as key and value separated by = symbol,
+example:
+name=kek last_name=top song_name=shadilay power=9001
+Values can be strings or integer numbers.
+If a value can be treated both as a number and a string, it is treated as number.
+Write a wrapper class for this key value storage that works like this:
+storage = KeyValueStorage('path_to_file.txt') that has its keys
+and values accessible as collection items and as attributes.
+Example:
+    storage['name'] # will be string 'kek'
+    storage.song_name # will be 'shadilay'
+    storage.power # will be integer 9001
+In case of attribute clash existing built-in attributes take precedence.
+In case when value cannot be assigned to an attribute (for example when there's a line 1=something)
+ValueError should be raised. File size is expected to be small,
+you are permitted to read it entirely into memory."""
 
 
 class KeyValueStorage:
@@ -61,10 +36,3 @@ class KeyValueStorage:
 
     def __getitem__(self, key):
         return self.__dict__.get(key, None)
-
-
-
-storage = KeyValueStorage('key_value_storage')
-print(storage["name"])
-print(storage.song)
-print(storage.power)
