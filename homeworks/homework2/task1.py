@@ -12,7 +12,8 @@ from typing import List
 
 import nltk
 from nltk import word_tokenize
-nltk.download('punkt')
+
+nltk.download("punkt")
 
 
 def get_longest_diverse_words(file_path: str) -> List[str]:
