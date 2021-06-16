@@ -1,4 +1,5 @@
 import pytest
+
 from homeworks.homework6.task2 import *
 
 opp_teacher = Teacher("Daniil", "Shadrin")
