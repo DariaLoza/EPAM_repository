@@ -1,4 +1,4 @@
-from homeworks.homework7.task1 import find_occurrences, example_tree
+from homeworks.homework7.task1 import example_tree, find_occurrences
 
 
 def test_find_occurrences():

@@ -1,5 +1,3 @@
-import pytest
-
 from homeworks.homework7.task3 import tic_tac_toe_checker
 
 

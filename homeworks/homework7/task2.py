@@ -33,8 +33,3 @@ def backspace_compare(first: str, second: str):
         return False
     else:
         return True
-
-
-print(backspace_compare("ab#c", "ad#c"))
-print(backspace_compare("a##c", "#a#c"))
-print(backspace_compare("a#c", "b"))
