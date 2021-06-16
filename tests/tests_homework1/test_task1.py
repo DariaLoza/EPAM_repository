@@ -3,7 +3,7 @@ import homeworks.homework2.task1
 
 def test_get_longest_diverse_words():
     """Testing that function find 10 longest words consisting from largest amount of unique symbols"""
-    assert homeworks.homework2.task1.get_longest_diverse_words("data.txt") == [
+    assert homeworks.homework2.task1.get_longest_diverse_words("tests/tests_homework1/data.txt") == [
         "Nichtkämpfern",
         "Entscheidungsschlacht",
         "Schöpfungsmacht",
