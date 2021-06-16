@@ -10,7 +10,7 @@ import string
 from collections import OrderedDict
 from typing import List
 
-from homeworks.homework2.nltkmodules import word_tokenize
+from nltk import word_tokenize
 
 
 def get_longest_diverse_words(file_path: str) -> List[str]:
