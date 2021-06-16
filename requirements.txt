@@ -3,4 +3,4 @@ flake8==3.9.2
 isort==5.8.0
 pytest==6.2.4
 nltk==3.6.2
-
+requests
