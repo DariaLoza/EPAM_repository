@@ -1,5 +1,4 @@
 import pytest
-
 from homeworks.homework6.task2 import *
 
 opp_teacher = Teacher("Daniil", "Shadrin")
@@ -21,9 +20,6 @@ def test_not_homework_passed_in_homework_result_():
         result_4 = HomeworkResult(good_student, "fff", "Solution")
 
 
-
-
-
 def test_teachers_and_Teacher_class_have_common_data():
     opp_teacher.check_homework(result_1)
     opp_teacher.check_homework(result_2)
@@ -32,9 +28,6 @@ def test_teachers_and_Teacher_class_have_common_data():
     temp_2 = Teacher.homework_done
     temp_3 = advanced_python_teacher.homework_done
     assert temp_1 == temp_2 == temp_3
-
-
-
 
 
 def test_reset_homework_results_for_particular_homework():
