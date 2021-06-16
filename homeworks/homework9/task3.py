@@ -9,7 +9,6 @@ For dir with two files from hw1.py:
 4
 """
 from pathlib import Path
-
 from typing import Callable, Optional
 
 
