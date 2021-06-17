@@ -22,4 +22,5 @@ def test_do_homework():
     teacher = Teacher("Daniil", "Shadrin")
     expired_homework = teacher.create_homework("Learn functions", 0)
     student = Student("Roman", "Petrov")
-    assert student.do_homework(expired_homework) == None, "You are late"
+    add_homework = student.do_homework(expired_homework)
+    assert add_homework is None
