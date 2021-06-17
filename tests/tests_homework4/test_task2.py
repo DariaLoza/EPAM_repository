@@ -1,6 +1,7 @@
 from unittest import TestCase
 
 import mock
+
 from homeworks.homework4.task2 import count_dots_on_i
 
 
