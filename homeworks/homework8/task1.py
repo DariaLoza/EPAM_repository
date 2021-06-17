@@ -27,7 +27,7 @@ class KeyValueStorage:
             key, value = line.split("=")
 
             if not key.isidentifier():
-                raise ValueError("Wrong key!")
+                raise ValueError
 
             if value.isdigit():
                 value = int(value)
