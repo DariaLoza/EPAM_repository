@@ -18,7 +18,7 @@ def test_creating_function_from_method_and_using_it():
     assert oop_homework.deadline == datetime.timedelta(days=5)
 
 
-def test_do_homework(capsys):
+def test_do_homework():
     teacher = Teacher("Daniil", "Shadrin")
     expired_homework = teacher.create_homework("Learn functions", 0)
     student = Student("Roman", "Petrov")
