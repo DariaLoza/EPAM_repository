@@ -20,15 +20,15 @@ from typing import List
 def fizzbuzz(n: int) -> List[str]:
     fizz_buzz_list = []
     for i in range(1, n + 1):
-        if i % 3 == 0:
+        if i % 5 == 0 and i % 3 == 0:
+            fizz_buzz_list.append("fizz buzz")
+        elif i % 3 == 0:
             fizz_buzz_list.append("fizz")
         elif i % 5 == 0:
             fizz_buzz_list.append("buzz")
-        elif i % 5 == 0 and i % 3 == 0:
-            fizz_buzz_list.append("fizz buzz")
         else:
             fizz_buzz_list.append(str(i))
     return fizz_buzz_list
 
 
-print(fizzbuzz(34))
+print(fizzbuzz(17))
