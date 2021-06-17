@@ -25,6 +25,7 @@ You will learn:
 
 import os
 
+
 def read_magic_number(file_path) -> bool:
     with open(file_path, "r") as file:
         path = os.path.abspath(file_path)

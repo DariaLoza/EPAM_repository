@@ -25,6 +25,3 @@ import urllib.request as request
 def count_dots_on_i(url):
     with request.urlopen(url) as response:
         return response.read().decode("utf-8").count("i")
-
-
-
