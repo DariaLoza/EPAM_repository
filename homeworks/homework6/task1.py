@@ -41,3 +41,26 @@ def instances_counter(cls):
 @instances_counter
 class User:
     pass
+
+
+@instances_counter
+class Vehicle(object):
+    """docstring"""
+
+    def __init__(self, color, doors, tires):
+        """Constructor"""
+        self.color = color
+        self.doors = doors
+        self.tires = tires
+
+    def brake(self):
+        """
+        Stop the car
+        """
+        return "Braking"
+
+    def drive(self):
+        """
+        Drive the car
+        """
+        return "I'm driving!"
