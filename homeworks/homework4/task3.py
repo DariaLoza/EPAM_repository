@@ -26,4 +26,3 @@ def my_precious_logger(text: str):
         return sys.stderr.write(text)
     else:
         return sys.stdout.write(text)
-

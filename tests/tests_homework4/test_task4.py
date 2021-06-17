@@ -10,4 +10,22 @@ def test_fizzbuzz_function_with_6():
 
 
 def test_fizzbuzz_function_with_17():
-    assert fizzbuzz(17) == ['1', '2', 'fizz', '4', 'buzz', 'fizz', '7', '8', 'fizz', 'buzz', '11', 'fizz', '13', '14', 'fizz buzz', '16', '17']
+    assert fizzbuzz(17) == [
+        "1",
+        "2",
+        "fizz",
+        "4",
+        "buzz",
+        "fizz",
+        "7",
+        "8",
+        "fizz",
+        "buzz",
+        "11",
+        "fizz",
+        "13",
+        "14",
+        "fizz buzz",
+        "16",
+        "17",
+    ]
