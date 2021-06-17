@@ -22,6 +22,4 @@ def test_do_homework(capsys):
     teacher = Teacher("Daniil", "Shadrin")
     expired_homework = teacher.create_homework("Learn functions", 0)
     student = Student("Roman", "Petrov")
-    student.do_homework(expired_homework)
-    captured = capsys.readouterr()
-    assert captured.out.strip() == "You are late"
+    assert student.do_homework(expired_homework) is None
