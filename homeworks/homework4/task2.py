@@ -23,11 +23,8 @@ import urllib.request as request
 
 
 def count_dots_on_i(url):
-    count_i = 0
     with request.urlopen(url) as response:
-        for element in response.read().decode("utf-8"):
-            if element == "i":
-                count_i += 1
-            else:
-                count_i += 0
-        return count_i
+        return response.read().decode("utf-8").count("i")
+
+
+

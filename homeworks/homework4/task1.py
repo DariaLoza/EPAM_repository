@@ -23,14 +23,17 @@ You will learn:
 **** https://docs.python.org/3/tutorial/errors.html#raising-exceptions
 """
 
+import os
 
 def read_magic_number(file_path) -> bool:
     with open(file_path, "r") as file:
-        first_line = file.readline()
-        if not first_line.isdigit():
-            raise ValueError
-        else:
-            if 1 <= int(first_line) < 3:
-                return True
+        path = os.path.abspath(file_path)
+        if os.path.isfile(path):
+            first_line = file.readline()
+            if not first_line.isdigit():
+                raise ValueError
             else:
-                return False
+                if 1 <= int(first_line) < 3:
+                    return True
+                else:
+                    return False

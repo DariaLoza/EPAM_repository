@@ -29,3 +29,5 @@ def fizzbuzz(n: int) -> List[str]:
         else:
             fizz_buzz_list.append(str(i))
     return fizz_buzz_list
+
+print(fizzbuzz(34))

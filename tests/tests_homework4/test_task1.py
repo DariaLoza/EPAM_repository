@@ -12,8 +12,7 @@ def test_read_magic_number_true():
     encoded_number = str.encode(number)
     os.write(test_file_1, encoded_number)
     path = os.path.abspath("file_1.txt")
-    if os.path.isfile(path):
-        assert read_magic_number(path)
+    assert read_magic_number(path)
     os.close(test_file_1)
     os.remove(path)
 
@@ -25,8 +24,7 @@ def test_read_magic_number_false():
     encoded_number = str.encode(number)
     os.write(test_file_2, encoded_number)
     path = os.path.abspath("file_2.txt")
-    if os.path.isfile(path):
-        assert not read_magic_number(path)
+    assert not read_magic_number(path)
     os.close(test_file_2)
     os.remove(path)
 
@@ -38,8 +36,7 @@ def test_read_magic_number_value_error():
     encoded_number = str.encode(number)
     os.write(test_file_3, encoded_number)
     path = os.path.abspath("file_3.txt")
-    if os.path.isfile(path):
-        with pytest.raises(ValueError):
-            assert read_magic_number(path) == ValueError
+    with pytest.raises(ValueError):
+        assert read_magic_number(path) == ValueError
     os.close(test_file_3)
     os.remove(path)
