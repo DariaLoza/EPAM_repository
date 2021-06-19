@@ -47,11 +47,10 @@ class User:
 class Vehicle(object):
     """docstring"""
 
-    def __init__(self, color, doors, tires):
+    def __init__(self, color, doors):
         """Constructor"""
         self.color = color
         self.doors = doors
-        self.tires = tires
 
     def brake(self):
         """
