@@ -27,7 +27,7 @@ def universal_file_counter(
     counter = 0
 
     with open(dir_path, "r") as file:
-        if tokenizer is True:
+        if tokenizer:
             counter += len(tokenizer(file.read))
             return counter
         else:
