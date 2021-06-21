@@ -20,7 +20,10 @@ def test_creating_function_from_method_and_using_it():
 
 def test_do_homework():
     teacher = Teacher("Daniil", "Shadrin")
-    expired_homework = teacher.create_homework("Learn functions", 0)
     student = Student("Roman", "Petrov")
-    add_homework = student.do_homework(expired_homework)
-    assert add_homework is None
+    expired_homework = teacher.create_homework("Learn functions", 0)
+    create_homework_too = teacher.create_homework
+    oop_homework = create_homework_too("create 2 simple classes", 5)
+    assert oop_homework.deadline == datetime.timedelta(days=5)
+    assert student.do_homework(oop_homework) is oop_homework
+    assert student.do_homework(expired_homework) is None

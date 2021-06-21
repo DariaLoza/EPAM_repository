@@ -40,14 +40,11 @@ from datetime import datetime, timedelta
 class Homework:
     def __init__(self, text, deadline):
         self.text = text
-        self.deadline = timedelta(days=deadline)
+        self.deadline = timedelta(deadline)
         self.created = datetime.now()
 
     def is_active(self):
-        if self.deadline + self.created < datetime.now():
-            return True
-        else:
-            return False
+        return (self.deadline + self.created) > datetime.now()
 
 
 class Student:
@@ -55,12 +52,13 @@ class Student:
         self.first_name = first_name
         self.last_name = last_name
 
-    def do_homework(self, my_homework):
-        if my_homework.is_active() is False:
+    @staticmethod
+    def do_homework(my_homework):
+        if my_homework.is_active():
+            return my_homework
+        else:
             print("You are late")
             return None
-        else:
-            return my_homework
 
 
 class Teacher:
@@ -68,5 +66,23 @@ class Teacher:
         self.first_name = first_name
         self.last_name = last_name
 
-    def create_homework(self, text, deadline):
+    @staticmethod
+    def create_homework(text, deadline):
         return Homework(text, deadline)
+
+
+if __name__ == "__main__":
+    teacher = Teacher("Daniil", "Shadrin")
+    student = Student("Roman", "Petrov")
+    teacher.first_name  # Daniil
+    student.last_name  # Petrov
+
+    expired_homework = teacher.create_homework("Learn functions", 0)
+    expired_homework.created  # Example:
+    expired_homework.deadline
+    expired_homework.text
+
+    create_homework_too = teacher.create_homework
+    oop_homework = create_homework_too("create 2 simple classes", 5)
+    student.do_homework(oop_homework)
+    student.do_homework(expired_homework)  # You are late
