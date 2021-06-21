@@ -8,27 +8,35 @@ file2.txt:
 2
 4
 6
->>> list(merge_sorted_files(["file1.txt", "file2.txt"]))
+>>list(merge_sorted_files(["file1.txt", "file2.txt"]))
 [1, 2, 3, 4, 5, 6]
 """
 from pathlib import Path
+
 from typing import Iterator
+
+import math
+
+
+def list_on_two_parts(lst, c_num):
+    n = math.ceil(len(lst) / c_num)
+
+    for x in range(0, len(lst), n):
+        e_c = lst[x : n + x]
+
+        if len(e_c) < n:
+            e_c = e_c + [None for y in range(n - len(e_c))]
+        yield e_c
 
 
 def merge_sorted_files(file_list: [str, str]) -> Iterator:
-    file1 = Path(file_list[0])
-    file2 = Path(file_list[1])
-    file1 = file1.read_text().splitlines()
-    file2 = file2.read_text().splitlines()
-    list_merged = []
-    len1 = len(file1)
-    len2 = len(file2)
+    list_of_numbers = []
+    for files in file_list:
+        file = Path(files)
+        file = file.read_text().splitlines()
+        for i in file:
+            list_of_numbers.append(int(i))
+    return sorted(list_of_numbers)
 
-    for index in range(max(len1, len2)):
-        if index + 1 <= len1:
-            list_merged += [int(file1[index])]
 
-        if index + 1 <= len2:
-            list_merged += [int(file2[index])]
-
-    return list_merged
+print(merge_sorted_files(["file1", "file2", "file3"]))

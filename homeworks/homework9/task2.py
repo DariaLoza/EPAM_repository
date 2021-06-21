@@ -24,5 +24,4 @@ class SupressorAsClass:
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
-        print("exit")
         return isinstance(exc_value, self.exception)
