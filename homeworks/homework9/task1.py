@@ -36,5 +36,3 @@ def merge_sorted_files(file_list: [str, str]) -> Iterator:
             list_of_numbers.append(int(i))
     return sorted(list_of_numbers)
 
-
-print(merge_sorted_files(["file1", "file2", "file3"]))
