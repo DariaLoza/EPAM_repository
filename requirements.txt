@@ -1,3 +1,7 @@
-
 aiohttp==3.7.4.post0
 beautifulsoup4==4.9.3
+black==21.5b1
+flake8==3.9.2
+isort==5.8.0
+pytest==6.2.4
+nltk==3.6.2
